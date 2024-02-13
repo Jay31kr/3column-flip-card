@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(0, 0%, 95%);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flip {
+    transform-style: preserve-3d;
+    transition: all 0.9s ease;
+}
+
+.card {
+
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.card h1 {
+    color: hsl(0, 0%, 95%);
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+}
+
+.card p {
+    color: hsla(0, 0%, 100%, 0.75);
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+}
+
+.learn {
+    background-color: hsl(0, 0%, 95%);
+    border-style: none;
+    padding: 13px 30px;
+    border-radius: 24px;
+    align-self: center;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.face {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.f-prop {
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+.suvs-face {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.sedan-face {
+    background-color: hsl(31, 77%, 52%);
+}
+
+.luxury-face {
+    background-color: hsl(179, 100%, 13%);
+}
+
+.sedans {
+    background-color: hsl(31, 77%, 52%);
+    border-radius: 12px 0 0 12px;
+}
+
+.suvs {
+    background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+    background-color: hsl(179, 100%, 13%);
+    border-radius: 0 12px 12px 0;
+}
+
+
+.flip:hover {
+    transform: rotateY(180deg);
+}
+
+.learn:hover {
+    background-color: hsl(0, 0%, 44%);
+}
+
+@media (max-width : 450px) {
+    .container {
+        margin-top: 40%;
+        flex-direction: column;
+        overflow: scroll;
+    }
+
+    .card {
+        height: 50%;
+        gap: 7px;
+    }
+}
